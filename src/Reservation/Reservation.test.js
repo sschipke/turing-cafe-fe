@@ -20,4 +20,9 @@ describe('reservation', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+  it('should call cancelReservation when the button is clicked', () => {
+    let mockEvent = {target: {id: 123}}
+    wrapper.find('button').simulate('click', mockEvent);
+    expect(mockCancelReservation).toHaveBeenCalledWith(mockEvent)
+  })
 })
