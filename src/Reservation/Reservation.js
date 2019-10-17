@@ -7,7 +7,7 @@ const Reservation = ({reservation, cancelReservation}) => {
     <div className="reservation">
       <h2>{name}</h2>
       <p>{date}</p>
-      <p>{time}</p>
+      <p>{time} pm</p>
       <p>Number of Guests: {number}</p>
       <button id={id} onClick={cancelReservation} type="button">Cancel</button>
     </div>

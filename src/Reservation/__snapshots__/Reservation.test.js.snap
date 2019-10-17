@@ -12,6 +12,7 @@ exports[`reservation should match the snapshot 1`] = `
   </p>
   <p>
     8:00
+     pm
   </p>
   <p>
     Number of Guests: 
