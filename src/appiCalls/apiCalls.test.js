@@ -25,4 +25,12 @@ describe('getReservtions', () => {
     getReservations()
     .then(results => expect(results).toEqual(mockResponse))
   })
+  it('should throw an error if something goes wrong (SAD)', () => {
+    window.fetch =  jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok:false
+      })
+    })
+    expect(getReservations()).rejects.toEqual(Error('Unable to fetch reservations'))
+  })
 })

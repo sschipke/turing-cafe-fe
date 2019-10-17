@@ -2,7 +2,7 @@ export const getReservations = () => {
   return fetch('http://localhost:3001/api/v1/reservations')
     .then(res => {
       if(!res.ok) {
-        throw Error('Unable to complete initial fetch')
+        throw Error('Unable to fetch reservations')
       }
       
       return res.json()})
