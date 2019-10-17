@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {getReservations} from  '../apiCalls'
+import {getReservations, postReservation, deleteReservation} from  '../apiCalls'
 import Form from '../Form/Form';
 import Container from '../Container/Container';
 
@@ -14,6 +14,8 @@ class App extends Component {
   }
 
   addReservation = (newReservation) => {
+    postReservation(newReservation)
+    .catch(err => console.log(err))
     this.setState({ reservations: [newReservation,...this.state.reservations]})
   }
 
@@ -21,6 +23,8 @@ class App extends Component {
     let id = parseInt(e.target.id);
     let filteredReservations =  this.state.reservations.filter( res => res.id !== id);
     this.setState({reservations: filteredReservations})
+    deleteReservation(id)
+    .catch(err => console.log(err))
   }
 
   componentDidMount() {
