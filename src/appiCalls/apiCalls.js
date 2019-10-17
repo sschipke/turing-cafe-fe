@@ -4,8 +4,11 @@ export const getReservations = () => {
       if(!res.ok) {
         throw Error('Unable to fetch reservations')
       }
-      
       return res.json()})
+    .catch(res => {
+      console.log(res)
+      return res
+    })
 }
 
 export const postReservation = (newReservation) => {
@@ -18,7 +21,14 @@ export const postReservation = (newReservation) => {
   };
 
   return fetch('http://localhost:3001/api/v1/reservations', options)
-    .then(response => response.json())
+    .then(res => {
+      if (!res.ok) {
+        throw Error('Unable to post new reservation')
+      }
+      return res.json()
+    })
+    .catch(res => {console.log(res)
+    return res})
 }
 
 export const deleteReservation = id => {
