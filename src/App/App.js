@@ -12,6 +12,10 @@ class App extends Component {
     }
   }
 
+  addReservation = (newReservation) => {
+    this.setState({ reservations: [newReservation,...this.state.reservations]})
+  }
+
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
     .then(res => res.json())
@@ -22,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <Form />
+        <Form addReservation={this.addReservation}/>
         <Container reservations={reservations}/>
       </div>
     )
