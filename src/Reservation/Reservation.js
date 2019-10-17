@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Reservation = ({reservation}) => {
-  console.log('card', reservation)
   const {name, date, time, number} = reservation;
   return (
     <div className="reservation">
