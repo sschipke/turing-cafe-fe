@@ -1,4 +1,5 @@
 import React from 'react';
+import './Container.css'
 import Reservation from '../Reservation/Reservation'
 
 const Container = ({reservations}) => {

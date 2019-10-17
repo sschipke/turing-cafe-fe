@@ -1,0 +1,9 @@
+.reservation {
+  background: white;
+  border: 2px solid teal;
+  border-radius: 10px;
+  color: teal;
+  height: 35%;
+  margin: 10px;
+  width: 25%;
+}
