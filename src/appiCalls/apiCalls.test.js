@@ -21,4 +21,8 @@ describe('getReservtions', () => {
     getReservations()
     expect(window.fetch).toHaveBeenCalledWith('http://localhost:3001/api/v1/reservations')
   })
+  it('should return an array of reservations (HAPPY)', () => {
+    getReservations()
+    .then(results => expect(results).toEqual(mockResponse))
+  })
 })
