@@ -1,16 +1,18 @@
 form {
   display: flex;
   justify-content: space-between;
+  width: 90%;
 }
 
 form input {
-  width: 20%;
+  width: 15%;
   padding: 5px;
 }
 
 form button {
   background: teal;
   color: white;
+  width: 15%;
 }
 
 button:hover {

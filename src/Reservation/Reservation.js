@@ -8,7 +8,8 @@ const Reservation = ({reservation}) => {
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{time}</p>
-      <p>{number}</p>
+      <p>Number of Guests: {number}</p>
+      <button type="button">Cancel</button>
     </div>
   )
 }
