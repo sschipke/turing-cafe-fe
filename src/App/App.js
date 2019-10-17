@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Container from '../Container/Container'
+import Form from '../Form/Form';
+import Container from '../Container/Container';
+
 
 class App extends Component {
   constructor() {
@@ -20,9 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-
-        </div>
+        <Form />
         <Container reservations={reservations}/>
       </div>
     )
