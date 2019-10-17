@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {getReservations} from  '../apiCalls'
 import Form from '../Form/Form';
 import Container from '../Container/Container';
 
@@ -23,9 +24,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/v1/reservations')
-    .then(res => res.json())
+    getReservations()
     .then(data => this.setState({reservations: data}))
+    .catch(err => console.log(err))
   }
   render() {
     const {reservations} = this.state
