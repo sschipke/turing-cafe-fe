@@ -13,6 +13,7 @@ exports[`App should match the snapshot 1`] = `
     addReservation={[Function]}
   />
   <Container
+    cancelReservation={[Function]}
     reservations={Array []}
   />
 </div>
