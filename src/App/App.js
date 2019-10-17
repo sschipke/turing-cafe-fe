@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {getReservations, postReservation, deleteReservation} from  '../apiCalls'
+import {getReservations, postReservation, deleteReservation} from  '../appiCalls/apiCalls'
 import Form from '../Form/Form';
 import Container from '../Container/Container';
 
