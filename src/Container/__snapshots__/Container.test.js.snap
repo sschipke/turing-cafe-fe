@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should match the snapshot 1`] = `
+<section
+  className="container"
+>
+  <Reservation
+    cancelReservation={[MockFunction]}
+    key="123"
+    reservation={
+      Object {
+        "date": "10/25",
+        "id": 123,
+        "name": "Kimberly",
+        "number": 6,
+        "time": "8:00",
+      }
+    }
+  />
+</section>
+`;
