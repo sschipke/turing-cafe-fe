@@ -16,6 +16,12 @@ class App extends Component {
     this.setState({ reservations: [newReservation,...this.state.reservations]})
   }
 
+  cancelReservation = (e) => {
+    let id = parseInt(e.target.id);
+    let filteredReservations =  this.state.reservations.filter( res => res.id !== id);
+    this.setState({reservations: filteredReservations})
+  }
+
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
     .then(res => res.json())
@@ -27,7 +33,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <Form addReservation={this.addReservation}/>
-        <Container reservations={reservations}/>
+        <Container cancelReservation={this.cancelReservation} reservations={reservations}/>
       </div>
     )
   }

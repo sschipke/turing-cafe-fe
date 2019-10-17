@@ -1,15 +1,15 @@
 import React from 'react';
 import './Reservation.css'
 
-const Reservation = ({reservation}) => {
-  const {name, date, time, number} = reservation;
+const Reservation = ({reservation, cancelReservation}) => {
+  const {name, date, time, number, id} = reservation;
   return (
     <div className="reservation">
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{time}</p>
       <p>Number of Guests: {number}</p>
-      <button type="button">Cancel</button>
+      <button id={id} onClick={cancelReservation} type="button">Cancel</button>
     </div>
   )
 }

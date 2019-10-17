@@ -2,9 +2,9 @@ import React from 'react';
 import './Container.css'
 import Reservation from '../Reservation/Reservation'
 
-const Container = ({reservations}) => {
+const Container = ({reservations, cancelReservation}) => {
   let allReservations = reservations.map(reservation => {
-    return <Reservation key={reservation.id} reservation={reservation} />
+    return <Reservation key={reservation.id} reservation={reservation} cancelReservation={cancelReservation} />
   })
   return (<section className="container">
     {allReservations}
